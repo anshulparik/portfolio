@@ -6,8 +6,10 @@ import Image from "next/image";
 const Projects = () => {
   return (
     <div>
-      <section className="p-4">
-        <h1 className="text-4xl font-bold text-center py-4">Projects</h1>
+      <section className="p-4 mb-14 lg:mb-40">
+        <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
+          Projects
+        </h1>
         <div className="">
           {PROJECTS?.map((project, index) => {
             return (

@@ -4,10 +4,18 @@ import { ABOUT } from "@/constant";
 
 const AboutMe = () => {
   return (
-    <section className="p-4">
-      <h1 className="text-4xl font-bold text-center py-4">About Me</h1>
-      <h3 className="text-4xl mb-4 md:text-6xl uppercase lg:text-8xl">{ABOUT?.text1}</h3>
-      <p className="text-lg text-wrap">{ABOUT?.text2}</p>
+    <section className="p-4 mb-14 lg:mb-40">
+      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
+        About Me
+      </h1>
+      <h3
+        className="text-4xl mb-8 md:text-6xl uppercase lg:text-8xl 
+        bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 
+        bg-clip-text text-transparent"
+      >
+        {ABOUT?.text1}
+      </h3>
+      <p className="text-lg text-wrap text-neutral-400">{ABOUT?.text2}</p>
     </section>
   );
 };

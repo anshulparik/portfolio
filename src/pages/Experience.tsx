@@ -3,12 +3,19 @@ import { EXPERIENCES } from "@/constant/index";
 
 const Experience = () => {
   return (
-    <section className="p-4">
-      <h1 className="text-4xl font-bold text-center py-4">Experience</h1>
+    <section className="p-4 mb-14 lg:mb-40">
+      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
+        Experience
+      </h1>
       <div>
         {EXPERIENCES?.map((experience, index) => {
           return (
-            <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+            <div
+              key={index}
+              className={` ${
+                index !== EXPERIENCES.length - 1 ? "mb-8" : ""
+              } flex flex-wrap lg:justify-center`}
+            >
               <div className="w-full lg:w-1/4">
                 <p className="mb-2 text-sm">{experience?.year}</p>
               </div>

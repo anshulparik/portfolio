@@ -8,12 +8,17 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between">
-      <div>
-        <Image src="/images/logo3.png" width={200} height={300} alt="ANSHUL" />
+      <div className="ml-2 lg:ml-8">
+        <Image
+          src="/images/logo_new.png"
+          width={100}
+          height={180}
+          alt="ANSHUL"
+        />
       </div>
-      <div className="flex mr-8 text-3xl">
-        <FaLinkedin className="mr-3 cursor-pointer" />
-        <FaGithub className="cursor-pointer" />
+      <div className="flex mr-2 lg:mr-8 text-3xl">
+        <FaLinkedin className="mr-3 cursor-pointer hover:text-sky-600" />
+        <FaGithub className="cursor-pointer hover:text-purple-500" />
       </div>
     </nav>
   );

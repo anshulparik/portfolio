@@ -13,8 +13,8 @@ import { SiNestjs } from "react-icons/si";
 
 const Technologies = () => {
   return (
-    <section className="">
-      <h1 className="text-4xl font-bold text-center py-4">Technologies</h1>
+    <section className="p-4 mb-14 lg:mb-40">
+      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">Technologies</h1>
       <div className="flex flex-wrap items-center justify-center px-4 gap-4">
         <div className="rounded-2xl border-4 border-white p-4">
           <FaReact className="text-7xl text-cyan-400" />
@@ -31,14 +31,11 @@ const Technologies = () => {
         <div className="rounded-2xl border-4 border-white p-4">
           <SiNestjs className="text-7xl text-red-600" />
         </div>
-        {/* <div className="rounded-2xl border-4 border-white p-4">
-          <BiLogoPostgresql className="text-7xl text-blue-900" />
-        </div> */}
         <div className="rounded-2xl border-4 border-white p-4">
           <FaAws className="text-7xl text-yellow-600" />
         </div>
         <div className="rounded-2xl border-4 border-white p-4">
-          <FaDocker className="text-7xl text-blue-00" />
+          <FaDocker className="text-7xl text-blue-400" />
         </div>
         <div className="rounded-2xl border-4 border-white p-4">
           <IoLogoJavascript className="text-7xl text-yellow-300" />
