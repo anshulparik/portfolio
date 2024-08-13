@@ -1,7 +1,8 @@
-import project1 from "../../public/images/logo_new.png";
-import project2 from "../../public/images/logo_new.png";
-import project3 from "../../public/images/logo_new.png";
-import project4 from "../../public/images/logo_new.png";
+import teaStationHome from "../../public/images/home_TS.png";
+import teaStation from "../../public/images/TeaStation.png";
+import traveller from "../../public/images/LoneTraveller.png";
+import travellerHome from "../../public/images/home_LT.png";
+import todo from "../../public/images/TodoList.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -47,32 +48,25 @@ export const ABOUT = {
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
-    image: project1,
+    title: "Tea Station",
+    image: teaStationHome,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
   },
   {
-    title: "Task Management App",
-    image: project2,
+    title: "Lone Traveller",
+    image: travellerHome,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
     technologies: ["HTML", "CSS", "Angular", "Firebase"],
   },
   {
-    title: "Portfolio Website",
-    image: project3,
+    title: "Todo App",
+    image: todo,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
   },
 ];
 
