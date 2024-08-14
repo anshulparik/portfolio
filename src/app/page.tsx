@@ -4,6 +4,7 @@ import Technologies from "@/components/Technologies";
 import Experience from "@/pages/Experience";
 import Projects from "@/pages/Projects";
 import ContactMe from "@/pages/ContactMe";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return <div>
@@ -13,5 +14,6 @@ export default function Home() {
     <Experience />
     <Projects />
     <ContactMe />
+    <Footer />
   </div>;
 }

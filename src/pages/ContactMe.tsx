@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { MdErrorOutline } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
+
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -49,10 +51,10 @@ const ContactMe = () => {
       setIsSending(true);
       emailjs
         ?.send(
-          "service_3t4wlfk",
-          "template_6zqvuvf",
+          process?.env?.NEXT_PUBLIC_SERVICE_KEY,
+          process?.env?.NEXT_PUBLIC_TEMPLATE_KEY,
           formData,
-          "nJMkzQeGzH31siy7O"
+          process?.env?.NEXT_PUBLIC_OPTION_KEY
         )
         .then((response) => {
           console.log("SUCCESS!", response?.status, response?.text);
@@ -77,13 +79,13 @@ const ContactMe = () => {
     <section className="p-4 mb-14 lg:mb-40">
       <Toaster />
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
-        Contact Me
+        Contact <span className="text-purple-800">Me</span>
       </h1>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center"
       >
-        <div className="mb-4 lg:w-[60%]">
+        <div className="mb-4 w-full md:w-[60%]">
           <input
             type="text"
             id="name"
@@ -92,17 +94,20 @@ const ContactMe = () => {
             placeholder="Enter your name."
             onChange={handleChange}
             autoComplete="off"
-            className={`mb-8 w-full appearance-none border-0 border-b-2 bg-transparent
-            py-2 text-sm focus:outline-none placeholder:text-xl placeholder:text-neutral-400 
-            focus:bg-transparent focus:text-xl focus:text-purple-800  ${
+            className={`mb-2 w-full appearance-none border-0 border-b-2 bg-transparent
+            py-2 focus:outline-none placeholder:text-neutral-400 
+            focus:bg-transparent focus:text-purple-800  ${
               formData?.name ? "focus:border-purple-800" : ""
             }`}
           />
           {errors?.name && (
-            <p className="text-sm mb-2 text-pink-700">{errors?.name}</p>
+            <p className="text-sm mb-2 text-red-600 flex items-center gap-2">
+              <MdErrorOutline />
+              {errors?.name}
+            </p>
           )}
         </div>
-        <div className="mb-4 lg:w-[60%]">
+        <div className="mb-4 w-full md:w-[60%]">
           <input
             type="email"
             id="email"
@@ -111,35 +116,52 @@ const ContactMe = () => {
             placeholder="Enter your email address."
             onChange={handleChange}
             autoComplete="off"
-            className={`mb-8 w-full appearance-none border-0 border-b-2 bg-transparent
-            py-2 text-sm focus:outline-none placeholder:text-xl placeholder:text-neutral-400 
-            focus:bg-transparent focus:text-xl focus:text-purple-800  ${
+            className={`mb-2 w-full appearance-none border-0 border-b-2 bg-transparent
+            py-2 focus:outline-none placeholder:text-neutral-400 
+            focus:bg-transparent focus:text-purple-800  ${
               formData?.email ? "focus:border-purple-800" : ""
             }`}
           />
           {errors?.email && (
-            <p className="text-sm mb-2 text-pink-700">{errors?.email}</p>
+            <p className="text-sm mb-2 text-red-600 flex items-center gap-2">
+              <MdErrorOutline /> {errors?.email}
+            </p>
           )}
         </div>
-        <div className="lg:w-[60%]">
+        <div className="mb-4 w-full md:w-[60%]">
           <textarea
             id="message"
             name="message"
             value={formData?.message}
-            placeholder="Enter your message for me."
+            placeholder="Enter your message."
             onChange={handleChange}
-            autoComplete="off"
             rows={4}
-            className={`mb-8 w-full appearance-none border-0 border-b-2 bg-transparent
-            py-2 text-sm focus:outline-none placeholder:text-xl placeholder:text-neutral-400 
-            focus:bg-transparent focus:text-xl focus:text-purple-800  ${
+            autoComplete="off"
+            className={`mb-2 w-full appearance-none border-0 border-b-2 bg-transparent
+            py-2 focus:outline-none placeholder:text-neutral-400 
+            focus:bg-transparent focus:text-purple-800  ${
               formData?.message ? "focus:border-purple-800" : ""
             }`}
           />
           {errors?.message && (
-            <p className="text-sm mb-2 text-pink-700">{errors?.message}</p>
+            <p className="text-sm mb-2 text-red-600 flex items-center gap-2">
+              <MdErrorOutline />
+              {errors?.message}
+            </p>
           )}
         </div>
+        <button
+          type="submit"
+          disabled={isSending}
+          className={`w-full md:w-[60%] text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2 
+          rounded bg-purple-800 uppercase 
+          font-semibold tracking-wider text-white border-2 border-transparent 
+          transition-all duration-300 ease-in-out 
+        hover:bg-black hover:border-purple-800 hover:text-purple-800
+          ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
+        >
+          {isSending ? "Sending..." : "Send"}
+        </button>
       </form>
     </section>
   );

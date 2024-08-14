@@ -6,7 +6,14 @@ const AboutMe = () => {
   return (
     <section className="p-4 mb-14 lg:mb-40">
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
-        About Me
+        About{" "}
+        <span
+          // className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 
+          // bg-clip-text text-transparent"
+          className="text-purple-800"
+        >
+          Me
+        </span>
       </h1>
       <h3
         className="text-4xl mb-8 md:text-6xl uppercase lg:text-8xl 

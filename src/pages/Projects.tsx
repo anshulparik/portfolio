@@ -20,13 +20,11 @@ const Projects = () => {
                 <div className="w-full lg:w-2/5">
                   <Image
                     src={project?.image}
-                    width={400}
-                    height={350}
                     alt={project?.title}
-                    className="mb-6 rounded"
+                    className="mb-6 rounded w-full md:w-[70%] lg:w-[80%]"
                   />
                 </div>
-                <div className="w-full max-w-xl lg:w-3/5">
+                <div className="w-full max-w-xl lg:w-[calc(60%_-_3rem)] ">
                   <h6 className="mb-2 font-semibold">{project?.title}</h6>
                   <p className="mb-4 text-neutral-400">
                     {project?.description}

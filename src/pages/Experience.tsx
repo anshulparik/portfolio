@@ -6,6 +6,7 @@ const Experience = () => {
     <section className="p-4 mb-14 lg:mb-40">
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         Experience
+        
       </h1>
       <div>
         {EXPERIENCES?.map((experience, index) => {
@@ -16,12 +17,14 @@ const Experience = () => {
                 index !== EXPERIENCES.length - 1 ? "mb-8" : ""
               } flex flex-wrap lg:justify-center`}
             >
-              <div className="w-full lg:w-1/4">
-                <p className="mb-2 text-sm">{experience?.year}</p>
+              <div className="w-full lg:w-2/5">
+                <p className="mb-2 text-sm font-extrabold lg:text-center">
+                  {experience?.year}
+                </p>
               </div>
-              <div className="w-full max-w-xl lg:w-3/4">
+              <div className="w-full max-w-xl lg:w-3/5">
                 <h6 className="mb-2 font-semibold">
-                  {experience?.role} -{" "}
+                  {experience?.role} - {" "}
                   <span className="text-sm text-purple-100">
                     {experience?.company}
                   </span>

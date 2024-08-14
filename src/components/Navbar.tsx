@@ -7,13 +7,13 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between">
-      <div className="ml-2 lg:ml-8">
+    <nav className="mt-4 lg:mt-6 flex items-center justify-between">
+      <div className="ml-1 lg:ml-6">
         <Image
-          src="/images/logo_new.png"
-          width={100}
-          height={180}
+          src="/images/anshul25.png"
           alt="ANSHUL"
+          width={140}
+          height={120}
         />
       </div>
       <div className="flex mr-2 lg:mr-8 text-3xl">

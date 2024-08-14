@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   title: "Anshul Parik",
   description: "Software Engineer",
 };
-
-// className="m-0 p-0 border-box"
-
 export default function RootLayout({
   children,
 }: Readonly<{
