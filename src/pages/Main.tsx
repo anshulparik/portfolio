@@ -16,16 +16,18 @@ const Main = () => {
       >
         Software Engineer
       </h2>
-      <button
-        className={`mt-2 text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2  
-          rounded bg-purple-800 uppercase 
+      <a href="/anshulparik.pdf" download>
+        <button
+          className={`mt-2 text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2  
+          rounded bg-purple-800 uppercase
           font-semibold tracking-wider text-white border-2 border-transparent 
           transition-all duration-300 ease-in-out 
         hover:bg-black hover:border-purple-800 hover:text-purple-800
         `}
-      >
-        Resume <MdFileDownload className="inline-block text-xl lg:text-2xl" />
-      </button>
+        >
+          Resume <MdFileDownload className="inline-block text-xl lg:text-2xl" />
+        </button>
+      </a>
     </section>
   );
 };

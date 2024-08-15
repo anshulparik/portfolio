@@ -4,38 +4,27 @@ import traveller from "../../public/images/LoneTraveller.png";
 import travellerHome from "../../public/images/home_LT.png";
 import todo from "../../public/images/TodoList.png";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
-
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
-
 export const EXPERIENCES: any = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "Nov 2021 - Feb 2024",
+    role: "Junior Software Developer",
+    company: "Mysense Technologies Private Limited, Mohali",
+    description: `At Mysense Technologies, I played a key role in developing and maintaining complex e-commerce applications, including an Admin dashboard and Order Management System. I was responsible for designing and constructing modules from the ground up, implementing robust server-side logic with NestJS, and ensuring secure user authentication. My work included integrating APIs, optimizing user experience, and applying SOLID principles to maintain a clean and efficient codebase. Additionally, I enhanced user insights through comprehensive Google Analytics data tracking and collaborated closely with my team to troubleshoot, debug, and deliver high-quality software solutions.`,
+    technologies: ["React.js", "Next.js", "Nest.js", "MsSQL", "Firebase", "Electron"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    year: "Feb 2024 - Apr 2024",
+    role: "Software Developer",
+    company: "Markovate, Gurugram",
+    description: `During my time at Markovate, I spearheaded several AI Proof of Concepts (POCs), focusing on advanced AI models and frameworks such as Langchain and Llama Index. I developed and implemented Multimodal RAGs (Retriever-Reader-Generator models) capable of processing both text and image inputs, creating sophisticated AI chatbots tailored to client needs. Additionally, I integrated Guardrails AI to ensure data security and customized response formats, enhancing the user experience.`,
+    technologies: ["Python", "Langchain", "Node.js", "OpenAI", "Llama Index"],
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
+    year: "May 2024 - Aug 2024",
     role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    company: "Aubergine Solutions Private Limited, Ahmedabad",
+    description: `At Aubergine Solutions, I managed and mentored a team of interns, leading a major project from inception to completion. I designed the entire project schema and workflow, creating robust and scalable components that ensured the project's success and longevity. My role involved precise project planning and client communication, where I provided accurate time estimates and created compelling Proof of Concepts (POCs) using technologies like Strapi and React, directly influencing client decisions.`,
+    technologies: ["Tailwind CSS", "React.js", "Prisma", "Node.js", "Postgres", "Shadcn"],
   },
 ];
 
@@ -43,7 +32,7 @@ export const EXPERIENCES: any = [
 export const ABOUT = {
   text1: "Transforming Ideas into Powerful Applications",
   text2:
-    "Hello! I'm Anshul Parik, a full-stack developer with a flair for graphic design. I thrive on crafting web experiences that are not only visually stunning but also highly functional and user-friendly. My passion for detail ensures that every project is polished and professional. Beyond coding, I'm an avid explorer of new cultures and cuisines. My curiosity drives me to stay on the cutting edge of technology and design trends, bringing innovative and practical solutions to every challenge. Whether I'm developing a sleek website or diving into the latest tech, I am dedicated to delivering excellence in every project.",
+    "Hello! I'm Anshul Parik, a Software Engineer with over 3 years of experience in crafting scalable, user-friendly applications. My expertise spans full-stack development, with a strong focus on backend and frontend technologies. I’m passionate about delivering high-quality software that meets client needs, and I thrive in collaborative environments where effective communication and problem-solving are key. Always eager to learn and innovate, I aim to contribute impactful solutions that drive success. My passion for detail ensures that every project is polished and professional.",
 };
 
 export const PROJECTS = [
@@ -69,4 +58,3 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
   },
 ];
-
