@@ -9,41 +9,41 @@ const Experience = () => {
         
       </h1>
       <div>
-        {EXPERIENCES?.map((experience, index) => {
+        {EXPERIENCES?.map((experience: any, index: number) => {
           return (
             <div
-              key={index}
+              key={`${experience?.company}-${index}`}
               className={` ${
                 index !== EXPERIENCES.length - 1 ? "mb-8" : ""
-              } flex flex-wrap lg:justify-center`}
+              } flex flex-wrap justify-center`}
             >
-              <div className="w-full lg:w-2/5">
+              <div className="w-full max-w-xl lg:w-2/5">
                 <p className="mb-2 text-sm font-extrabold lg:text-center">
                   {experience?.year}
                 </p>
               </div>
               <div className="w-full max-w-xl lg:w-3/5">
-                <h6 className="mb-2 font-semibold">
-                  {experience?.role} - {" "}
-                  <span className="text-sm text-purple-100">
-                    {experience?.company}
-                  </span>
+                <h6 className="mb-1 font-semibold">{experience?.role}</h6>
+                <h6 className="text-sm mb-4 font-semibold text-purple-800">
+                  {experience?.company}
                 </h6>
                 <p className="mb-4 text-neutral-400">
                   {experience?.description}
                 </p>
                 <div className="flex flex-wrap">
-                  {experience?.technologies?.map((tech, index) => {
-                    return (
-                      <span
-                        className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium
+                  {experience?.technologies?.map(
+                    (tech: string, index: number) => {
+                      return (
+                        <span
+                          className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium
                       text-purple-800"
-                        key={index}
-                      >
-                        {tech}
-                      </span>
-                    );
-                  })}
+                          key={`${tech}-${index}`}
+                        >
+                          {tech}
+                        </span>
+                      );
+                    }
+                  )}
                 </div>
               </div>
             </div>

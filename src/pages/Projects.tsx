@@ -2,6 +2,8 @@ import { PROJECTS } from "@/constant";
 import React from "react";
 
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 
 const Projects = () => {
   return (
@@ -13,27 +15,36 @@ const Projects = () => {
         <div className="">
           {PROJECTS?.map((project, index) => {
             return (
-              <div
-                key={index}
-                className="mb-8 flex flex-wrap lg:justify-center"
-              >
-                <div className="w-full lg:w-2/5">
+              <div key={index} className="mb-8 flex flex-wrap justify-center">
+                <div className="w-full mb-4 lg:mb-0 lg:w-2/5 flex justify-center">
                   <Image
                     src={project?.image}
                     alt={project?.title}
-                    className="mb-6 rounded w-full md:w-[70%] lg:w-[80%]"
+                    className="mb-6 rounded w-full md:w-[80%] lg:w-[80%]"
                   />
                 </div>
                 <div className="w-full max-w-xl lg:w-[calc(60%_-_3rem)] ">
-                  <h6 className="mb-2 font-semibold">{project?.title}</h6>
+                  <div className="flex justify-between items-center mb-4">
+                    <h6 className="font-semibold">{project?.title}</h6>
+                    <div className="flex flex-wrap gap-4">
+                      <FaGithub
+                        className="cursor-pointer text-2xl text-purple-800
+                     hover:text-white"
+                      />
+                      <FaEye
+                        className="cursor-pointer text-2xl text-purple-800 
+                    hover:text-white"
+                      />
+                    </div>
+                  </div>
                   <p className="mb-4 text-neutral-400">
                     {project?.description}
                   </p>
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap mb-8">
                     {project?.technologies?.map((tag) => {
                       return (
                         <span
-                          key={index}
+                          key={`${tag}-${index}`}
                           className="mr-2 mt-4 rounded px-2 py-1 text-sm font-medium
                             bg-neutral-900 text-purple-800"
                         >
