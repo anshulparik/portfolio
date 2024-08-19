@@ -28,12 +28,12 @@ const Projects = () => {
                     <h6 className="font-semibold">{project?.title}</h6>
                     <div className="flex flex-wrap gap-4">
                       <FaGithub
-                        className="cursor-pointer text-2xl text-purple-800
-                     hover:text-white"
+                        className="cursor-pointer text-2xl hover:text-purple-800
+                     text-white"
                       />
                       <FaEye
-                        className="cursor-pointer text-2xl text-purple-800 
-                    hover:text-white"
+                        className="cursor-pointer text-2xl hover:text-purple-800 
+                    text-white"
                       />
                     </div>
                   </div>
