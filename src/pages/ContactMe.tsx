@@ -1,20 +1,21 @@
 "use client";
-import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { MdErrorOutline } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
+import { MdErrorOutline } from "react-icons/md";
+import React, { ChangeEvent, useState } from "react";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
+import { ContactFormError, ContactForm } from "@/utils/type";
 
 
 const ContactMe = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactForm>({
     name: "",
     email: "",
     message: "",
   });
-  const [errors, setErrors] = useState<any>({});
-  const [isSending, setIsSending] = useState(false);
+  const [errors, setErrors] = useState<ContactFormError>({});
+  const [isSending, setIsSending] = useState<boolean>(false);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e?.target;
     setFormData({
       ...formData,
@@ -23,7 +24,7 @@ const ContactMe = () => {
   };
 
   const validate = () => {
-    let errors: any = {};
+    let errors: ContactFormError = {};
     if (!formData?.name) {
       errors.name = "Name is required!";
     }
@@ -41,7 +42,7 @@ const ContactMe = () => {
     return errors;
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
     const validationErrors = validate();
     if (Object?.keys(validationErrors)?.length > 0) {
@@ -51,12 +52,12 @@ const ContactMe = () => {
       setIsSending(true);
       emailjs
         ?.send(
-          process?.env?.NEXT_PUBLIC_SERVICE_KEY,
-          process?.env?.NEXT_PUBLIC_TEMPLATE_KEY,
+          process?.env?.NEXT_PUBLIC_SERVICE_KEY as string,
+          process?.env?.NEXT_PUBLIC_TEMPLATE_KEY as string,
           formData,
-          process?.env?.NEXT_PUBLIC_OPTION_KEY
+          process?.env?.NEXT_PUBLIC_OPTION_KEY as string
         )
-        .then((response) => {
+        .then((response: EmailJSResponseStatus) => {
           console.log("SUCCESS!", response?.status, response?.text);
           toast.success("Message sent successfully!");
           setFormData({
@@ -65,7 +66,7 @@ const ContactMe = () => {
             message: "",
           });
         })
-        .catch((error) => {
+        .catch((error: Error) => {
           console.log("FAILED!", error);
           toast?.error("Oops! Something went wrong. Please try again later.");
         })
@@ -76,7 +77,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="p-4 mb-14 lg:mb-40">
+    <section id="contact" className="p-4 mb-14 lg:mb-40">
       <Toaster />
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         Contact <span className="text-purple-800">Me</span>

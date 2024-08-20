@@ -1,23 +1,23 @@
 import React from "react";
-import Image from "next/image";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { FOOTER } from "@/utils/constants";
+import { FaLinkedin } from "react-icons/fa";
+import { Url } from "next/dist/shared/lib/router/router";
 
 const Footer = () => {
   return (
     <footer
       className="bg-purple-800 rounded-tl-[80px] pt-12 pb-6 md:py-12
-    px-8 ml-12 w-[calc(100%_-_48px)]"
+      px-8 ml-12 w-[calc(100%_-_48px)]"
     >
       <div className="md:flex md:items-center md:justify-between mb-6 md:mb-12">
         <div className="mb-6 md:mb-0">
           <p className="text-2xl md:text-3xl mb-2 font-semibold">
-            Let's keep in touch!
+            {FOOTER?.text1}
           </p>
-          <p className="text-sm md:text-base font-semibold">
-            Find me on any of these platforms...
-          </p>
+          <p className="text-sm md:text-base font-semibold">{FOOTER?.text2}</p>
         </div>
         <div className="flex text-2xl md:text-3xl">
           <Link

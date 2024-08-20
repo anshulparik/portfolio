@@ -1,15 +1,15 @@
 import React from "react";
-import { EXPERIENCES } from "@/constant/index";
+import { EXPERIENCES } from "@/utils/constants";
+import { ExperienceType } from "@/utils/type";
 
 const Experience = () => {
   return (
-    <section className="p-4 mb-14 lg:mb-40">
+    <section id="experience" className="p-4 mb-14 lg:mb-40">
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         Experience
-        
       </h1>
       <div>
-        {EXPERIENCES?.map((experience: any, index: number) => {
+        {EXPERIENCES?.map((experience, index: number) => {
           return (
             <div
               key={`${experience?.company}-${index}`}

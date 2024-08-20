@@ -1,10 +1,9 @@
 import React from "react";
-import Image from "next/image";
-import { ABOUT } from "@/constant";
+import { ABOUT } from "@/utils/constants";
 
 const AboutMe = () => {
   return (
-    <section className="p-4 mb-14 lg:mb-40">
+    <section id="about" className="p-4 mb-14 lg:mb-40">
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         About <span className="text-purple-800">Me</span>
       </h1>
