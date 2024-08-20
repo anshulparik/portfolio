@@ -28,7 +28,14 @@ export const EXPERIENCES = [
     role: "Junior Software Developer",
     company: "Mysense Technologies Private Limited, Mohali",
     description: `At Mysense Technologies, I played a key role in developing and maintaining complex e-commerce applications, including an Admin dashboard and Order Management System. I was responsible for designing and constructing modules from the ground up, implementing robust server-side logic with NestJS, and ensuring secure user authentication. My work included integrating APIs, optimizing user experience, and applying SOLID principles to maintain a clean and efficient codebase. Additionally, I enhanced user insights through comprehensive Google Analytics data tracking and collaborated closely with my team to troubleshoot, debug, and deliver high-quality software solutions.`,
-    technologies: ["React.js", "Next.js", "Nest.js", "MsSQL", "Firebase", "Electron"],
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Nest.js",
+      "MsSQL",
+      "Firebase",
+      "Electron",
+    ],
   },
   {
     year: "Feb 2024 - Apr 2024",
@@ -42,7 +49,14 @@ export const EXPERIENCES = [
     role: "Software Engineer",
     company: "Aubergine Solutions Private Limited, Ahmedabad",
     description: `At Aubergine Solutions, I managed and mentored a team of interns, leading a major project from inception to completion. I designed the entire project schema and workflow, creating robust and scalable components that ensured the project's success and longevity. My role involved precise project planning and client communication, where I provided accurate time estimates and created compelling Proof of Concepts (POCs) using technologies like Strapi and React, directly influencing client decisions.`,
-    technologies: ["Tailwind CSS", "React.js", "Prisma", "Node.js", "Postgres", "Shadcn"],
+    technologies: [
+      "Tailwind CSS",
+      "React.js",
+      "Prisma",
+      "Node.js",
+      "Postgres",
+      "Shadcn",
+    ],
   },
 ] as const;
 
@@ -54,7 +68,7 @@ export const ABOUT = {
 
 export const FOOTER = {
   text1: "Let's keep in touch!",
-  text2: "Find me on any of these platforms..."
+  text2: "Find me on any of these platforms...",
 } as const;
 
 export const PROJECTS = [
@@ -62,7 +76,7 @@ export const PROJECTS = [
     title: "Tea Station",
     image: teaStationHome,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+      "A sleek and user-friendly tea station website. This project features a visually appealing design, offering users an intuitive interface to explore various tea options. The website includes responsive layouts, smooth animations, and a seamless browsing experience, reflecting a modern and inviting tea shop atmosphere",
     technologies: ["HTML", "CSS", "JS", "Animations"],
     liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
     githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_GITHUB as Url,
@@ -71,18 +85,18 @@ export const PROJECTS = [
     title: "Lone Traveller",
     image: travellerHome,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+      "Lone Traveller is a captivating travel website, showcasing a stunning image gallery. This project highlights breathtaking destinations through a visually rich interface, allowing users to explore travel stories and destinations with ease. The site features responsive design, smooth transitions, and an immersive gallery experience, perfect for solo adventurers seeking inspiration.",
     technologies: ["HTML", "CSS", "JS", "Fonts"],
     liveLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_LINK as Url,
     githubLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_GITHUB as Url,
   },
-  {
-    title: "Todo App",
-    image: todo,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "JS", "Bootstrap"],
-    liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
-    githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
-  },
+  // {
+  //   title: "Todo App",
+  //   image: todo,
+  //   description:
+  //     "A personal portfolio website showcasing projects, skills, and contact information.",
+  //   technologies: ["HTML", "CSS", "JS", "Bootstrap"],
+  //   liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
+  //   githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
+  // },
 ] as const;
