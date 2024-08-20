@@ -3,6 +3,7 @@ import teaStation from "../../public/images/TeaStation.png";
 import traveller from "../../public/images/LoneTraveller.png";
 import travellerHome from "../../public/images/home_LT.png";
 import todo from "../../public/images/TodoList.png";
+import { Url } from "next/dist/shared/lib/router/router";
 
 export const EXPERIENCES: any = [
   {
@@ -41,20 +42,26 @@ export const PROJECTS = [
     image: teaStationHome,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+    technologies: ["HTML", "CSS", "JS", "Animations"],
+    liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
+    githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_GITHUB as Url,
   },
   {
     title: "Lone Traveller",
     image: travellerHome,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+    technologies: ["HTML", "CSS", "JS", "Fonts"],
+    liveLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_LINK as Url,
+    githubLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_GITHUB as Url,
   },
   {
     title: "Todo App",
     image: todo,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+    technologies: ["HTML", "CSS", "JS", "Bootstrap"],
+    liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
+    githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
   },
 ];

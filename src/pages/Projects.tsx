@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -27,14 +28,18 @@ const Projects = () => {
                   <div className="flex justify-between items-center mb-4">
                     <h6 className="font-semibold">{project?.title}</h6>
                     <div className="flex flex-wrap gap-4">
-                      <FaGithub
-                        className="cursor-pointer text-2xl hover:text-purple-800
-                     text-white"
-                      />
-                      <FaEye
-                        className="cursor-pointer text-2xl hover:text-purple-800 
-                    text-white"
-                      />
+                      <Link href={project.githubLink} target="_blank">
+                        <FaGithub
+                          className="cursor-pointer text-2xl hover:text-purple-800
+                          text-white"
+                        />
+                      </Link>
+                      <Link href={project.liveLink} target="_blank">
+                        <FaEye
+                          className="cursor-pointer text-2xl hover:text-purple-800 
+                          text-white"
+                        />
+                      </Link>
                     </div>
                   </div>
                   <p className="mb-4 text-neutral-400">

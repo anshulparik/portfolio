@@ -8,6 +8,8 @@ import { FaGithub } from "react-icons/fa";
 
 import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
+import Link from "next/link";
+import { Url } from "next/dist/shared/lib/router/router";
 
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState(0);
@@ -24,12 +26,14 @@ const Navbar = () => {
 
   return (
     <nav className="mt-4 lg:mt-6 flex items-center justify-between">
-      <div className="ml-1 lg:ml-6 relative w-[100px] h-[45px] lg:w-[140px] lg:h-[55px] ">
-        <Image src="/images/anshul25.png" alt="ANSHUL" quality={100} fill />
+      <div className="cursor-pointer ml-1 lg:ml-6 relative w-[100px] h-[45px] lg:w-[140px] lg:h-[55px]">
+        <Link href="/">
+          <Image src="/images/anshul25.png" alt="ANSHUL" quality={100} fill />
+        </Link>
       </div>
       <div className="flex mr-2 lg:mr-8">
         {screenSize && screenSize >= 768 ? (
-          <a
+          <Link
             // className={`
             //   text-inherit no-underline hover:no-underline
             //   focus:no-underline active:no-underline visited:no-underline
@@ -43,25 +47,37 @@ const Navbar = () => {
               transition-all duration-300 ease-in-out 
             hover:bg-black hover:border-purple-800 hover:text-purple-800"
             href="/anshulparik.pdf"
+            target="_blank"
             download
           >
             Resume <MdFileDownload className="inline-block" />
-          </a>
+          </Link>
         ) : (
-          <a
+          <Link
             href="/anshulparik.pdf"
+            target="_blank"
             className="text-inherit no-underline hover:no-underline
               focus:no-underline active:no-underline visited:no-underline
               outline-none border-none p-0 m-0
               
-              mr-3 text-2xl cursor-pointer"
+              mr-3 text-2xl lg:text-3xl cursor-pointer"
             download
           >
             <IoMdDownload className="text-purple-800" />
-          </a>
+          </Link>
         )}
-        <FaLinkedin className="mr-3 text-2xl lg:text-3xl cursor-pointer hover:text-sky-600" />
-        <FaGithub className="text-2xl lg:text-3xl cursor-pointer hover:text-purple-500" />
+        <Link
+          href={process?.env?.NEXT_PUBLIC_LINKEDIN_URL as Url}
+          target="_blank"
+        >
+          <FaLinkedin className="mr-3 text-2xl lg:text-3xl cursor-pointer hover:text-sky-600" />
+        </Link>
+        <Link
+          href={process?.env?.NEXT_PUBLIC_GITHUB_URL as Url}
+          target="_blank"
+        >
+          <FaGithub className="text-2xl lg:text-3xl cursor-pointer hover:text-purple-500" />
+        </Link>
       </div>
     </nav>
   );
