@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -5,25 +7,44 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { PROJECTS } from "@/utils/constants";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <section id="projects" className="p-4 mb-14 lg:mb-40">
-      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6"
+      >
         Projects
-      </h1>
+      </motion.h1>
       <div className="">
         {PROJECTS?.map((project, index: number) => {
           return (
-            <div key={project?.title} className="mb-8 flex flex-wrap justify-center">
-              <div className="w-full mb-4 lg:mb-0 lg:w-2/5 flex justify-center">
+            <div
+              key={project?.title}
+              className="mb-8 flex flex-wrap justify-center"
+            >
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1.5 }}
+                className="w-full mb-4 lg:mb-0 lg:w-2/5 flex justify-center"
+              >
                 <Image
                   src={project?.image}
                   alt={project?.title}
                   className="mb-6 rounded w-full md:w-[80%] lg:w-[80%]"
                 />
-              </div>
-              <div className="w-full max-w-xl lg:w-[calc(60%_-_3rem)] ">
+              </motion.div>
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                transition={{ duration: 1.5 }}
+                className="w-full max-w-xl lg:w-[calc(60%_-_3rem)] "
+              >
                 <div className="flex justify-between items-center mb-4">
                   <h6 className="font-semibold">{project?.title}</h6>
                   <div className="flex flex-wrap gap-4">
@@ -55,7 +76,7 @@ const Projects = () => {
                     );
                   })}
                 </div>
-              </div>
+              </motion.div>
             </div>
           );
         })}

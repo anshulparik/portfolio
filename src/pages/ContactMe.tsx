@@ -1,10 +1,11 @@
 "use client";
+
+import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import { MdErrorOutline } from "react-icons/md";
 import React, { ChangeEvent, useState } from "react";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import { ContactFormError, ContactForm } from "@/utils/type";
-
 
 const ContactMe = () => {
   const [formData, setFormData] = useState<ContactForm>({
@@ -15,7 +16,9 @@ const ContactMe = () => {
   const [errors, setErrors] = useState<ContactFormError>({});
   const [isSending, setIsSending] = useState<boolean>(false);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e?.target;
     setFormData({
       ...formData,
@@ -79,14 +82,24 @@ const ContactMe = () => {
   return (
     <section id="contact" className="p-4 mb-14 lg:mb-40">
       <Toaster />
-      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6"
+      >
         Contact <span className="text-purple-800">Me</span>
-      </h1>
+      </motion.h1>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center"
       >
-        <div className="mb-4 w-full md:w-[60%]">
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.5 }}
+          className="mb-4 w-full md:w-[60%]"
+        >
           <input
             type="text"
             id="name"
@@ -107,8 +120,13 @@ const ContactMe = () => {
               {errors?.name}
             </p>
           )}
-        </div>
-        <div className="mb-4 w-full md:w-[60%]">
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1.5 }}
+          className="mb-4 w-full md:w-[60%]"
+        >
           <input
             type="email"
             id="email"
@@ -128,8 +146,13 @@ const ContactMe = () => {
               <MdErrorOutline /> {errors?.email}
             </p>
           )}
-        </div>
-        <div className="mb-4 w-full md:w-[60%]">
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.5 }}
+          className="mb-4 w-full md:w-[60%]"
+        >
           <textarea
             id="message"
             name="message"
@@ -150,8 +173,11 @@ const ContactMe = () => {
               {errors?.message}
             </p>
           )}
-        </div>
-        <button
+        </motion.div>
+        <motion.button
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1.5 }}
           type="submit"
           disabled={isSending}
           className={`w-full md:w-[60%] text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2 
@@ -162,7 +188,7 @@ const ContactMe = () => {
           ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
         >
           {isSending ? "Sending..." : "Send"}
-        </button>
+        </motion.button>
       </form>
     </section>
   );

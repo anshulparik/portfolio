@@ -1,13 +1,20 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion"; 
 import { EXPERIENCES } from "@/utils/constants";
-import { ExperienceType } from "@/utils/type";
 
 const Experience = () => {
   return (
     <section id="experience" className="p-4 mb-14 lg:mb-40">
-      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6"
+      >
         Experience
-      </h1>
+      </motion.h1>
       <div>
         {EXPERIENCES?.map((experience, index: number) => {
           return (
@@ -17,12 +24,22 @@ const Experience = () => {
                 index !== EXPERIENCES.length - 1 ? "mb-8" : ""
               } flex flex-wrap justify-center`}
             >
-              <div className="w-full max-w-xl lg:w-2/5">
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1.5 }}
+                className="w-full max-w-xl lg:w-2/5"
+              >
                 <p className="mb-2 text-sm font-extrabold lg:text-center">
                   {experience?.year}
                 </p>
-              </div>
-              <div className="w-full max-w-xl lg:w-3/5">
+              </motion.div>
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                transition={{ duration: 1.5 }}
+                className="w-full max-w-xl lg:w-3/5"
+              >
                 <h6 className="mb-1 font-semibold">{experience?.role}</h6>
                 <h6 className="text-sm mb-4 font-semibold text-purple-800">
                   {experience?.company}
@@ -45,7 +62,7 @@ const Experience = () => {
                     }
                   )}
                 </div>
-              </div>
+              </motion.div>
             </div>
           );
         })}
