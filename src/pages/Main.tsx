@@ -1,6 +1,6 @@
 import React from "react";
-import TextSlider from "@/components/animations/TextSlider";
-import TextReveal from "@/components/animations/TextReveal";
+import TextSlider from "@/components/animations/components/TextSlider";
+import TextReveal from "@/components/animations/components/TextReveal";
 
 const Main = () => {
   return (
