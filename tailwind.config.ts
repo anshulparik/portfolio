@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       screens: {
         "sm2": "425px",
+        "sm3": "525px",
       },
       colors: {
         dark: "#000000",

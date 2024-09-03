@@ -17,23 +17,22 @@ const Projects = () => {
           return (
             <div
               key={project?.title}
-              className="mb-8 flex flex-wrap justify-center"
+              className="mb-8 flex flex-wrap justify-center 
+              lg:items-center lg:flex-nowrap lg:gap-10 xl:gap-16"
             >
-              <div className="w-full mb-4 xl:mb-0 xl:w-2/5 flex justify-center">
-                <div
-                  className="mb-6 relative
-                  w-full md:w-[80%] lg:w-[60%] xl:w-[80%] 
-                  h-44 sm2:h-48 md:h-64"
-                >
-                  <Image
-                    src={project?.image}
-                    alt={project?.title}
-                    className="rounded absolute object-cover"
-                    fill
-                  />
-                </div>
+              <div
+                className="mb-6 relative lg:w-2/5
+                w-[100%] h-36 sm2:h-44 sm3:h-56 md:h-64 lg:h-60 
+                max-w-xl lg:max-w-md"
+              >
+                <Image
+                  src={project?.image}
+                  alt={project?.title}
+                  className="rounded absolute object-cover"
+                  fill
+                />
               </div>
-              <div className="w-full max-w-xl xl:w-[calc(60%_-_3rem)] ">
+              <div className="w-full lg:w-3/5 max-w-xl">
                 <div className="flex justify-between items-center mb-4">
                   <h6 className="font-semibold">{project?.title}</h6>
                   <div className="flex flex-wrap gap-4">
