@@ -25,25 +25,29 @@ const Projects = () => {
           return (
             <div
               key={project?.title}
-              className="mb-8 flex flex-wrap justify-center"
+              className="mb-8 flex flex-wrap justify-center 
+              lg:items-center lg:flex-nowrap lg:gap-10 xl:gap-16"
             >
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1.5 }}
-                className="w-full mb-4 lg:mb-0 lg:w-2/5 flex justify-center"
+                className="mb-6 relative lg:w-2/5
+                w-[100%] h-36 sm2:h-44 sm3:h-56 md:h-64 lg:h-60 
+                max-w-xl lg:max-w-md"
               >
                 <Image
                   src={project?.image}
                   alt={project?.title}
-                  className="mb-6 rounded w-full md:w-[80%] lg:w-[80%]"
+                  className="rounded absolute object-cover"
+                  fill
                 />
               </motion.div>
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1.5 }}
-                className="w-full max-w-xl lg:w-[calc(60%_-_3rem)] "
+                className="w-full lg:w-3/5 max-w-xl"
               >
                 <div className="flex justify-between items-center mb-4">
                   <h6 className="font-semibold">{project?.title}</h6>

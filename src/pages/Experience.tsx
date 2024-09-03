@@ -22,13 +22,14 @@ const Experience = () => {
               key={`${experience?.company}-${index}`}
               className={` ${
                 index !== EXPERIENCES.length - 1 ? "mb-8" : ""
-              } flex flex-wrap justify-center`}
+              } flex flex-wrap justify-center lg:items-center
+              lg:flex-nowrap lg:gap-10 xl:gap-16`}
             >
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1.5 }}
-                className="w-full max-w-xl lg:w-2/5"
+                className="w-full lg:w-2/5 max-w-xl lg:max-w-md"
               >
                 <p className="mb-2 text-sm font-extrabold lg:text-center">
                   {experience?.year}
@@ -52,8 +53,7 @@ const Experience = () => {
                     (tech: string, index: number) => {
                       return (
                         <span
-                          className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium
-                      text-purple-800"
+                          className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
                           key={`${tech}-${index}`}
                         >
                           {tech}
