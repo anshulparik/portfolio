@@ -24,27 +24,6 @@ export const TECHNOLOGIES = [
 
 export const EXPERIENCES = [
   {
-    year: "Nov 2021 - Feb 2024",
-    role: "Junior Software Developer",
-    company: "Mysense Technologies Private Limited, Mohali",
-    description: `At Mysense Technologies, I played a key role in developing and maintaining complex e-commerce applications, including an Admin dashboard and Order Management System. I was responsible for designing and constructing modules from the ground up, implementing robust server-side logic with NestJS, and ensuring secure user authentication. My work included integrating APIs, optimizing user experience, and applying SOLID principles to maintain a clean and efficient codebase. Additionally, I enhanced user insights through comprehensive Google Analytics data tracking and collaborated closely with my team to troubleshoot, debug, and deliver high-quality software solutions.`,
-    technologies: [
-      "React.js",
-      "Next.js",
-      "Nest.js",
-      "MsSQL",
-      "Firebase",
-      "Electron",
-    ],
-  },
-  {
-    year: "Feb 2024 - Apr 2024",
-    role: "Software Developer",
-    company: "Markovate, Gurugram",
-    description: `During my time at Markovate, I spearheaded several AI Proof of Concepts (POCs), focusing on advanced AI models and frameworks such as Langchain and Llama Index. I developed and implemented Multimodal RAGs (Retriever-Reader-Generator models) capable of processing both text and image inputs, creating sophisticated AI chatbots tailored to client needs. Additionally, I integrated Guardrails AI to ensure data security and customized response formats, enhancing the user experience.`,
-    technologies: ["Python", "Langchain", "Node.js", "OpenAI", "Llama Index"],
-  },
-  {
     year: "May 2024 - Aug 2024",
     role: "Software Engineer",
     company: "Aubergine Solutions Private Limited, Ahmedabad",
@@ -56,6 +35,27 @@ export const EXPERIENCES = [
       "Node.js",
       "Postgres",
       "Shadcn",
+    ],
+  },
+  {
+    year: "Feb 2024 - Apr 2024",
+    role: "Software Developer",
+    company: "Markovate, Gurugram",
+    description: `During my time at Markovate, I spearheaded several AI Proof of Concepts (POCs), focusing on advanced AI models and frameworks such as Langchain and Llama Index. I developed and implemented Multimodal RAGs (Retriever-Reader-Generator models) capable of processing both text and image inputs, creating sophisticated AI chatbots tailored to client needs. Additionally, I integrated Guardrails AI to ensure data security and customized response formats, enhancing the user experience.`,
+    technologies: ["Python", "Langchain", "Node.js", "OpenAI", "Llama Index"],
+  },
+  {
+    year: "Nov 2021 - Feb 2024",
+    role: "Junior Software Developer",
+    company: "Mysense Technologies Private Limited, Mohali",
+    description: `At Mysense Technologies, I played a key role in developing and maintaining complex e-commerce applications, including an Admin dashboard and Order Management System. I was responsible for designing and constructing modules from the ground up, implementing robust server-side logic with NestJS, and ensuring secure user authentication. My work included integrating APIs, optimizing user experience, and applying SOLID principles to maintain a clean and efficient codebase. Additionally, I enhanced user insights through comprehensive Google Analytics data tracking and collaborated closely with my team to troubleshoot, debug, and deliver high-quality software solutions.`,
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Nest.js",
+      "MsSQL",
+      "Firebase",
+      "Electron",
     ],
   },
 ] as const;

@@ -15,15 +15,25 @@ const Projects = () => {
       <div className="">
         {PROJECTS?.map((project, index: number) => {
           return (
-            <div key={project?.title} className="mb-8 flex flex-wrap justify-center">
-              <div className="w-full mb-4 lg:mb-0 lg:w-2/5 flex justify-center">
-                <Image
-                  src={project?.image}
-                  alt={project?.title}
-                  className="mb-6 rounded w-full md:w-[80%] lg:w-[80%]"
-                />
+            <div
+              key={project?.title}
+              className="mb-8 flex flex-wrap justify-center"
+            >
+              <div className="w-full mb-4 xl:mb-0 xl:w-2/5 flex justify-center">
+                <div
+                  className="mb-6 relative
+                  w-full md:w-[80%] lg:w-[60%] xl:w-[80%] 
+                  h-44 sm2:h-48 md:h-64"
+                >
+                  <Image
+                    src={project?.image}
+                    alt={project?.title}
+                    className="rounded absolute object-cover"
+                    fill
+                  />
+                </div>
               </div>
-              <div className="w-full max-w-xl lg:w-[calc(60%_-_3rem)] ">
+              <div className="w-full max-w-xl xl:w-[calc(60%_-_3rem)] ">
                 <div className="flex justify-between items-center mb-4">
                   <h6 className="font-semibold">{project?.title}</h6>
                   <div className="flex flex-wrap gap-4">

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "sm2": "425px",
+      },
       colors: {
         dark: "#000000",
         light: "#ffffff",
@@ -22,7 +25,7 @@ const config: Config = {
       animation: {
         "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",
         "fade-in": "fadeIn 1.5s forwards",
-        "slide": "slide 2.5s linear infinite",
+        slide: "slide 2.5s linear infinite",
       },
       keyframes: {
         "text-reveal": {
