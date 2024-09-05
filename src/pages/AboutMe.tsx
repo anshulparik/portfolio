@@ -17,7 +17,7 @@ const AboutMe = () => {
           transition={{ duration: 0.5 }}
           className="text-4xl mb-8 md:text-6xl uppercase lg:text-8xl 
           bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 
-          bg-clip-text text-transparent"
+          bg-clip-text text-transparent xl:max-w-screen-lg 2xl:max-w-screen-2xl"
         >
           {ABOUT?.text1}
         </motion.h3>
@@ -25,7 +25,7 @@ const AboutMe = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5 }}
-          className="text-lg text-wrap text-neutral-400"
+          className="text-lg text-wrap text-neutral-400 xl:max-w-screen-lg 2xl:max-w-screen-2xl"
         >
           {ABOUT?.text2}
         </motion.p>

@@ -28,11 +28,11 @@ const iconVariants = (duration: number): Variants => ({
 
 const Technologies = () => {
   return (
-    <section className="p-4 mb-14 lg:mb-40">
+    <section className="p-4 mb-14 lg:mb-40 flex flex-col items-center">
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         Technologies
       </h1>
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden xl:max-w-screen-lg 2xl:max-w-screen-2xl">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
@@ -45,7 +45,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <FaReact className="text-5xl text-cyan-400" />
+            <FaReact className="text-5xl lg:text-6xl text-cyan-400" />
           </motion.div>
           <motion.div
             variants={iconVariants(3)}
@@ -53,7 +53,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <RiNextjsFill className="text-5xl text-white" />
+            <RiNextjsFill className="text-5xl lg:text-6xl text-white" />
           </motion.div>
           <motion.div
             variants={iconVariants(4)}
@@ -61,7 +61,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <SiTypescript className="text-5xl text-sky-700" />
+            <SiTypescript className="text-5xl lg:text-6xl text-sky-700" />
           </motion.div>
           <motion.div
             variants={iconVariants(5)}
@@ -69,7 +69,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <FaNode className="text-5xl text-green-500" />
+            <FaNode className="text-5xl lg:text-6xl text-green-500" />
           </motion.div>
           <motion.div
             variants={iconVariants(6)}
@@ -77,7 +77,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <SiNestjs className="text-5xl text-red-600" />
+            <SiNestjs className="text-5xl lg:text-6xl text-red-600" />
           </motion.div>
           <motion.div
             variants={iconVariants(2)}
@@ -85,7 +85,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <FaAws className="text-5xl text-yellow-600" />
+            <FaAws className="text-5xl lg:text-6xl text-yellow-600" />
           </motion.div>
           <motion.div
             variants={iconVariants(3)}
@@ -93,7 +93,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <FaDocker className="text-5xl text-blue-400" />
+            <FaDocker className="text-5xl lg:text-6xl text-blue-400" />
           </motion.div>
           <motion.div
             variants={iconVariants(4)}
@@ -101,7 +101,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <IoLogoJavascript className="text-5xl text-yellow-300" />
+            <IoLogoJavascript className="text-5xl lg:text-6xl text-yellow-300" />
           </motion.div>
           <motion.div
             variants={iconVariants(5)}
@@ -109,7 +109,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <SiMongodb className="text-5xl text-green-600" />
+            <SiMongodb className="text-5xl lg:text-6xl text-green-600" />
           </motion.div>
           <motion.div
             variants={iconVariants(6)}
@@ -117,7 +117,7 @@ const Technologies = () => {
             animate="animate"
             className="rounded-full shadow-inner shadow-white p-8"
           >
-            <GrMysql className="text-5xl text-sky-700" />
+            <GrMysql className="text-5xl lg:text-6xl text-sky-700" />
           </motion.div>
         </motion.div>
       </div>
