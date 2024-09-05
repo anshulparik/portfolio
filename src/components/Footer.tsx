@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer
       className="bg-purple-800 rounded-tl-[80px] pt-12 pb-6 md:py-12
-      px-8 ml-12 w-[calc(100%_-_48px)]"
+      px-8 ml-12 w-[calc(100%_-_48px)] overflow-x-hidden"
     >
       <div className="md:flex md:items-center md:justify-between mb-6 md:mb-12">
         <motion.div
@@ -48,7 +48,17 @@ const Footer = () => {
         </motion.div>
       </div>
       <div className="font-bold md:text-xl w-full text-center border-t-2 border-white">
-        <motion.p
+        <p className="mt-6 md:mt-12">
+          Copyright © 2024 by
+          <Image
+            src="/images/anshul25.png"
+            alt="Anshul Parik"
+            width={100}
+            height={80}
+            className="inline-block"
+          />
+        </p>
+        {/* <motion.p
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1.5 }}
@@ -62,7 +72,7 @@ const Footer = () => {
             height={80}
             className="inline-block"
           />
-        </motion.p>
+        </motion.p> */}
       </div>
     </footer>
   );

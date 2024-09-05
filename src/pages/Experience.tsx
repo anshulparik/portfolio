@@ -1,21 +1,16 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { EXPERIENCES } from "@/utils/constants";
 
 const Experience = () => {
   return (
     <section id="experience" className="p-4 mb-14 lg:mb-40">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6"
-      >
+      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         Experience
-      </motion.h1>
-      <div>
+      </h1>
+      <div className="overflow-x-hidden">
         {EXPERIENCES?.map((experience, index: number) => {
           return (
             <div

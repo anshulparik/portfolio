@@ -82,17 +82,12 @@ const ContactMe = () => {
   return (
     <section id="contact" className="p-4 mb-14 lg:mb-40">
       <Toaster />
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6"
-      >
+      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         Contact <span className="text-purple-800">Me</span>
-      </motion.h1>
+      </h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center items-center"
+        className="flex flex-col justify-center items-center overflow-x-hidden"
       >
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
@@ -174,7 +169,19 @@ const ContactMe = () => {
             </p>
           )}
         </motion.div>
-        <motion.button
+        <button
+          type="submit"
+          disabled={isSending}
+          className={`w-full md:w-[60%] text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2 
+          rounded bg-purple-800 uppercase 
+          font-semibold tracking-wider text-white border-2 border-transparent 
+          transition-all duration-300 ease-in-out 
+        hover:bg-black hover:border-purple-800 hover:text-purple-800
+          ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
+        >
+          {isSending ? "Sending..." : "Send"}
+        </button>
+        {/* <motion.button
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1.5 }}
@@ -188,7 +195,7 @@ const ContactMe = () => {
           ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
         >
           {isSending ? "Sending..." : "Send"}
-        </motion.button>
+        </motion.button> */}
       </form>
     </section>
   );

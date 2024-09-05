@@ -7,15 +7,10 @@ import { motion } from "framer-motion";
 const AboutMe = () => {
   return (
     <section id="about" className="p-4 mb-14 lg:mb-40">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6"
-      >
+      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         About <span className="text-purple-800">Me</span>
-      </motion.h1>
-      <div className="w-full flex flex-col justify-center items-center">
+      </h1>
+      <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
         <motion.h3
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}

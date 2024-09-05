@@ -12,15 +12,10 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <section id="projects" className="p-4 mb-14 lg:mb-40">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6"
-      >
+      <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
         Projects
-      </motion.h1>
-      <div className="">
+      </h1>
+      <div className="overflow-x-hidden">
         {PROJECTS?.map((project, index: number) => {
           return (
             <div

@@ -1,6 +1,7 @@
 import todo from "../../public/images/TodoList.png";
-import travellerHome from "../../public/images/home_LT.png";
-import teaStationHome from "../../public/images/home_TS.png";
+import travellerHome from "../../public/images/home_lt.png";
+import teaStationHome from "../../public/images/home_ts.png";
+import animeInsightHome from "../../public/images/home_ai.png";
 
 import { GrMysql } from "react-icons/gr";
 import { RiNextjsFill } from "react-icons/ri";
@@ -73,11 +74,27 @@ export const FOOTER = {
 
 export const PROJECTS = [
   {
+    title: "Anime Insight",
+    image: animeInsightHome,
+    description:
+      "A personal portfolio website showcasing projects, skills, and contact information.",
+    technologies: [
+      "Next,js",
+      "Tailwind CSS",
+      "Server Actions",
+      "Server Components",
+      "Framer Motion",
+      "Infinite Scroll",
+    ],
+    liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
+    githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
+  },
+  {
     title: "Tea Station",
     image: teaStationHome,
     description:
       "A sleek and user-friendly tea station website. This project features a visually appealing design, offering users an intuitive interface to explore various tea options. The website includes responsive layouts, smooth animations, and a seamless browsing experience, reflecting a modern and inviting tea shop atmosphere",
-    technologies: ["HTML", "CSS", "JS", "Animations"],
+    technologies: ["HTML", "CSS", "JS", "Animations", "Flexbox"],
     liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
     githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_GITHUB as Url,
   },
@@ -86,17 +103,8 @@ export const PROJECTS = [
     image: travellerHome,
     description:
       "Lone Traveller is a captivating travel website, showcasing a stunning image gallery. This project highlights breathtaking destinations through a visually rich interface, allowing users to explore travel stories and destinations with ease. The site features responsive design, smooth transitions, and an immersive gallery experience, perfect for solo adventurers seeking inspiration.",
-    technologies: ["HTML", "CSS", "JS", "Fonts"],
+    technologies: ["HTML", "CSS", "JS", "Flexbox", "Animations", "Gallery"],
     liveLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_LINK as Url,
     githubLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_GITHUB as Url,
   },
-  // {
-  //   title: "Todo App",
-  //   image: todo,
-  //   description:
-  //     "A personal portfolio website showcasing projects, skills, and contact information.",
-  //   technologies: ["HTML", "CSS", "JS", "Bootstrap"],
-  //   liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
-  //   githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
-  // },
 ] as const;
