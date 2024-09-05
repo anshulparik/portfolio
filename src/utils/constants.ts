@@ -1,6 +1,6 @@
-import travellerHome from "../../public/images/home_lt.png";
-import teaStationHome from "../../public/images/home_ts.png";
-import animeInsightHome from "../../public/images/home_ai.png";
+import travellerHome from "../../public/images/home_LT.png";
+import teaStationHome from "../../public/images/home_TS.png";
+import animeInsightHome from "../../public/images/home_AI.png";
 
 import { GrMysql } from "react-icons/gr";
 import { RiNextjsFill } from "react-icons/ri";
