@@ -77,7 +77,7 @@ export const PROJECTS = [
     title: "Anime Insight",
     image: animeInsightHome,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
+      "The Anime Insight project is a dynamic web application designed to provide users with comprehensive ratings and information about their favorite anime series. Built with Next.js, this project utilizes server actions for efficient data fetching, ensuring a seamless and responsive experience. The application features infinite scroll, allowing users to effortlessly browse through an extensive list of anime without interruptions. Engaging animations enhance the user interface, creating a visually appealing and interactive platform for anime enthusiasts.",
     technologies: [
       "Next,js",
       "Tailwind CSS",
@@ -86,14 +86,14 @@ export const PROJECTS = [
       "Framer Motion",
       "Infinite Scroll",
     ],
-    liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
-    githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
+    liveLink: process?.env?.NEXT_PUBLIC_ANIME_INSIGHT_LINK as Url,
+    githubLink: process?.env?.NEXT_PUBLIC_ANIME_INSIGHT_GITHUB as Url,
   },
   {
     title: "Tea Station",
     image: teaStationHome,
     description:
-      "A sleek and user-friendly tea station website. This project features a visually appealing design, offering users an intuitive interface to explore various tea options. The website includes responsive layouts, smooth animations, and a seamless browsing experience, reflecting a modern and inviting tea shop atmosphere",
+      "Tea Station is a captivating web platform crafted specifically for tea enthusiasts. Leveraging Flexbox for a responsive and elegant layout, the site features a custom-designed hamburger menu for intuitive navigation. Modern animations enhance the user experience, adding a touch of sophistication and interactivity. Whether exploring tea varieties or learning brewing techniques, Tea Station offers a beautifully designed space that caters to all tea lovers with style and functionality.",
     technologies: ["HTML", "CSS", "JS", "Animations", "Flexbox"],
     liveLink: process?.env?.NEXT_PUBLIC_TEA_STATION_LINK as Url,
     githubLink: process?.env?.NEXT_PUBLIC_TEA_STATION_GITHUB as Url,
@@ -102,7 +102,7 @@ export const PROJECTS = [
     title: "Lone Traveller",
     image: travellerHome,
     description:
-      "Lone Traveller is a captivating travel website, showcasing a stunning image gallery. This project highlights breathtaking destinations through a visually rich interface, allowing users to explore travel stories and destinations with ease. The site features responsive design, smooth transitions, and an immersive gallery experience, perfect for solo adventurers seeking inspiration.",
+      "Lone Traveller is an inspiring website designed for adventurers and wanderers. It features modern animations that bring the site to life, creating an engaging and immersive experience. The highlight of the site is its stunning image gallery, showcasing breathtaking travel destinations and experiences. With its sleek design and dynamic visuals, Lone Traveller is the perfect platform for explorers seeking inspiration and information for their next adventure.",
     technologies: ["HTML", "CSS", "JS", "Flexbox", "Animations", "Gallery"],
     liveLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_LINK as Url,
     githubLink: process?.env?.NEXT_PUBLIC_LONE_TRAVELLER_GITHUB as Url,
