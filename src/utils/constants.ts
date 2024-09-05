@@ -1,4 +1,3 @@
-import todo from "../../public/images/TodoList.png";
 import travellerHome from "../../public/images/home_lt.png";
 import teaStationHome from "../../public/images/home_ts.png";
 import animeInsightHome from "../../public/images/home_ai.png";
