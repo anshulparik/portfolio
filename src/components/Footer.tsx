@@ -1,13 +1,11 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FOOTER } from "@/utils/constants";
 import { FaLinkedin } from "react-icons/fa";
 import { Url } from "next/dist/shared/lib/router/router";
+import { MotionDiv } from "./animations/Motion";
 
 const Footer = () => {
   return (
@@ -16,7 +14,7 @@ const Footer = () => {
       px-8 ml-12 w-[calc(100%_-_48px)] overflow-x-hidden"
     >
       <div className="md:flex md:items-center md:justify-between mb-6 md:mb-12">
-        <motion.div
+        <MotionDiv
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1.5 }}
@@ -26,8 +24,8 @@ const Footer = () => {
             {FOOTER?.text1}
           </p>
           <p className="text-sm md:text-base font-semibold">{FOOTER?.text2}</p>
-        </motion.div>
-        <motion.div
+        </MotionDiv>
+        <MotionDiv
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1.5 }}
@@ -45,7 +43,7 @@ const Footer = () => {
           >
             <FaGithub className="cursor-pointer hover:text-black" />
           </Link>
-        </motion.div>
+        </MotionDiv>
       </div>
       <div className="font-bold md:text-xl w-full text-center border-t-2 border-white">
         <p className="mt-6 md:mt-12">
@@ -58,21 +56,6 @@ const Footer = () => {
             className="inline-block"
           />
         </p>
-        {/* <motion.p
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 100 }}
-          transition={{ duration: 1.5 }}
-          className="mt-6 md:mt-12"
-        >
-          Copyright © 2024 by
-          <Image
-            src="/images/anshul25.png"
-            alt="Anshul Parik"
-            width={100}
-            height={80}
-            className="inline-block"
-          />
-        </motion.p> */}
       </div>
     </footer>
   );

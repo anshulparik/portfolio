@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +5,7 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { PROJECTS } from "@/utils/constants";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/animations/Motion";
 
 const Projects = () => {
   return (
@@ -23,7 +21,7 @@ const Projects = () => {
               className="mb-8 flex flex-wrap justify-center 
               lg:items-center lg:flex-nowrap lg:gap-10 xl:gap-16"
             >
-              <motion.div
+              <MotionDiv
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1.5 }}
@@ -37,8 +35,8 @@ const Projects = () => {
                   className="rounded absolute object-cover"
                   fill
                 />
-              </motion.div>
-              <motion.div
+              </MotionDiv>
+              <MotionDiv
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1.5 }}
@@ -75,7 +73,7 @@ const Projects = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </MotionDiv>
             </div>
           );
         })}

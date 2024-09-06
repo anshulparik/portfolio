@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
 import { ABOUT } from "@/utils/constants";
-import { motion } from "framer-motion";
+import { MotionH3, MotionPara } from "@/components/animations/Motion";
 
 const AboutMe = () => {
   return (
@@ -11,7 +9,7 @@ const AboutMe = () => {
         About <span className="text-purple-800">Me</span>
       </h1>
       <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
-        <motion.h3
+        <MotionH3
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
@@ -20,15 +18,15 @@ const AboutMe = () => {
           bg-clip-text text-transparent xl:max-w-screen-lg 2xl:max-w-screen-2xl"
         >
           {ABOUT?.text1}
-        </motion.h3>
-        <motion.p
+        </MotionH3>
+        <MotionPara
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5 }}
           className="text-lg text-wrap text-neutral-400 xl:max-w-screen-lg 2xl:max-w-screen-2xl"
         >
           {ABOUT?.text2}
-        </motion.p>
+        </MotionPara>
       </div>
     </section>
   );

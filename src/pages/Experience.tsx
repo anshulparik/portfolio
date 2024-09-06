@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
 import { EXPERIENCES } from "@/utils/constants";
+import { MotionDiv } from "@/components/animations/Motion";
 
 const Experience = () => {
   return (
@@ -20,7 +18,7 @@ const Experience = () => {
               } flex flex-wrap justify-center lg:items-center
               lg:flex-nowrap lg:gap-10 xl:gap-16`}
             >
-              <motion.div
+              <MotionDiv
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1.5 }}
@@ -29,8 +27,8 @@ const Experience = () => {
                 <p className="mb-2 text-sm font-extrabold lg:text-center">
                   {experience?.year}
                 </p>
-              </motion.div>
-              <motion.div
+              </MotionDiv>
+              <MotionDiv
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1.5 }}
@@ -57,7 +55,7 @@ const Experience = () => {
                     }
                   )}
                 </div>
-              </motion.div>
+              </MotionDiv>
             </div>
           );
         })}
