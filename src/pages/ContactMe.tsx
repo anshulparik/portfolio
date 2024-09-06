@@ -176,6 +176,7 @@ const ContactMe = () => {
           className={`w-full md:w-[60%] text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2 
           rounded uppercase font-semibold flex items-center gap-2 justify-center
           shadow-inner shadow-purple-500 text-purple-800 
+          transition-all duration-300 ease-in-out tracking-wider
           hover:text-white hover:bg-purple-800
           ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
         >
