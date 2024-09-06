@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { IoSend } from "react-icons/io5";
 import toast, { Toaster } from "react-hot-toast";
 import { MdErrorOutline } from "react-icons/md";
 import React, { ChangeEvent, useState } from "react";
@@ -173,13 +174,13 @@ const ContactMe = () => {
           type="submit"
           disabled={isSending}
           className={`w-full md:w-[60%] text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2 
-          rounded bg-purple-800 uppercase 
-          font-semibold tracking-wider text-white border-2 border-transparent 
-          transition-all duration-300 ease-in-out 
-        hover:bg-black hover:border-purple-800 hover:text-purple-800
+          rounded uppercase font-semibold flex items-center gap-2 justify-center
+          shadow-inner shadow-purple-500 text-purple-800 
+          hover:text-white hover:bg-purple-800
           ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
         >
           {isSending ? "Sending..." : "Send"}
+          <IoSend />
         </button>
         {/* <motion.button
           whileInView={{ opacity: 1, y: 0 }}
