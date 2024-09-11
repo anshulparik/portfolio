@@ -35,7 +35,7 @@ const Experience = () => {
                 className="w-full max-w-xl lg:w-3/5"
               >
                 <h6 className="mb-1 font-semibold">{experience?.role}</h6>
-                <h6 className="text-sm mb-4 font-semibold text-purple-800">
+                <h6 className="text-sm mb-4 font-semibold text-primary">
                   {experience?.company}
                 </h6>
                 <p className="mb-4 text-neutral-400">
@@ -46,7 +46,7 @@ const Experience = () => {
                     (tech: string, index: number) => {
                       return (
                         <span
-                          className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
+                          className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-primary"
                           key={`${tech}-${index}`}
                         >
                           {tech}

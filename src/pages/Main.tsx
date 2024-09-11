@@ -12,7 +12,7 @@ const Main = () => {
       <div>
         <h1 className="px-2 text-5xl md:text-6xl lg:text-9xl font-bold tracking-tight">
           <TextReveal text="Anshul" />{" "}
-          <span className="text-purple-800">
+          <span className="text-primary">
             <TextReveal text="Parik" />
           </span>
         </h1>

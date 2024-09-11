@@ -26,10 +26,10 @@ const NavbarInteraction = () => {
           className="
               flex items-center justify-center  
               text-xs lg:text-[14px] lg:leading-[18px] mr-3 px-2
-              rounded bg-purple-800 uppercase
+              rounded bg-primary uppercase
               font-semibold tracking-wider text-white border-2 border-transparent 
               transition-all duration-300 ease-in-out 
-            hover:bg-black hover:border-purple-800 hover:text-purple-800"
+            hover:bg-black hover:border-primary hover:text-primary"
           href="/anshulparik.pdf"
           target="_blank"
           download
@@ -47,7 +47,7 @@ const NavbarInteraction = () => {
               mr-3 text-2xl lg:text-3xl cursor-pointer"
           download
         >
-          <IoMdDownload className="text-purple-800" />
+          <IoMdDownload className="text-primary" />
         </Link>
       )}
       <Link

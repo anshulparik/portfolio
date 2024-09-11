@@ -12,40 +12,40 @@ const SmoothScroll = () => {
         <GoDot
           className="cursor-pointer
             transition-transform duration-200 
-            transform hover:scale-180 hover:text-purple-800 
-            hover:bg-purple-800 rounded-full"
+            transform hover:scale-180 hover:text-primary 
+            hover:bg-primary rounded-full"
         />
       </Link>
       <Link href="#about" className="mr-4 md:mr-16">
         <GoDot
           className="cursor-pointer
             transition-transform duration-200 
-            transform hover:scale-180 hover:text-purple-800 
-            hover:bg-purple-800 rounded-full"
+            transform hover:scale-180 hover:text-primary 
+            hover:bg-primary rounded-full"
         />
       </Link>
       <Link href="#experience" className="mr-4 md:mr-16">
         <GoDot
           className="cursor-pointer
             transition-transform duration-200 
-            transform hover:scale-180 hover:text-purple-800 
-            hover:bg-purple-800 rounded-full"
+            transform hover:scale-180 hover:text-primary 
+            hover:bg-primary rounded-full"
         />
       </Link>
       <Link href="#projects" className="mr-4 md:mr-16">
         <GoDot
           className="cursor-pointer
             transition-transform duration-200 
-            transform hover:scale-180 hover:text-purple-800 
-            hover:bg-purple-800 rounded-full"
+            transform hover:scale-180 hover:text-primary 
+            hover:bg-primary rounded-full"
         />
       </Link>
       <Link href="#contact">
         <GoDot
           className="cursor-pointer
             transition-transform duration-200 
-            transform hover:scale-180 hover:text-purple-800 
-            hover:bg-purple-800 rounded-full"
+            transform hover:scale-180 hover:text-primary 
+            hover:bg-primary rounded-full"
         />
       </Link>
     </div>

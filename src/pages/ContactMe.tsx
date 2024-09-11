@@ -7,7 +7,7 @@ const ContactMe = () => {
     <section id="contact" className="p-4 mb-14 lg:mb-40">
       <Toaster />
       <h1 className="text-4xl font-bold text-center py-4 mb-2 lg:mb-6">
-        Contact <span className="text-purple-800">Me</span>
+        Contact <span className="text-primary">Me</span>
       </h1>
       <ContactFormInteraction />
     </section>

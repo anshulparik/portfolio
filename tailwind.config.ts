@@ -9,12 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        "sm2": "425px",
-        "sm3": "525px",
+        sm2: "425px",
+        sm3: "525px",
+      },
+      backgroundImage: {
+        "orange-gradient": "linear-gradient(to right, #F97316, #C2410C)",
       },
       colors: {
         dark: "#000000",
         light: "#ffffff",
+        primary: "#6b21a8",
+        // primaryPurple: "#6b21a8",
+        // primaryBlue: "#06b6d4",
+        // primaryYellow: "#FFC000",
+        // primaryGreen: "#008170",
       },
       scale: {
         "175": "1.75",
@@ -54,3 +62,8 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
+// bg-gradient-to-r from-white via-sky-500 to-sky-700 bg-clip-text text-transparent
+// bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-transparent
+// bg-gradient-to-r from-teal-300 via-emerald-500 to-teal-800 bg-clip-text text-transparent
+// bg-gradient-to-r from-slate-300 via-amber-400 to-yellow-600 bg-clip-text text-transparent

@@ -99,8 +99,8 @@ const ContactFormInteraction = () => {
           autoComplete="off"
           className={`mb-2 w-full appearance-none border-0 border-b-2 bg-transparent
             py-2 focus:outline-none placeholder:text-neutral-400 
-            focus:bg-transparent focus:text-purple-800  ${
-              formData?.name ? "focus:border-purple-800" : ""
+            focus:bg-transparent focus:text-primary  ${
+              formData?.name ? "focus:border-primary" : ""
             }`}
         />
         {errors?.name && (
@@ -126,8 +126,8 @@ const ContactFormInteraction = () => {
           autoComplete="off"
           className={`mb-2 w-full appearance-none border-0 border-b-2 bg-transparent
             py-2 focus:outline-none placeholder:text-neutral-400 
-            focus:bg-transparent focus:text-purple-800  ${
-              formData?.email ? "focus:border-purple-800" : ""
+            focus:bg-transparent focus:text-primary  ${
+              formData?.email ? "focus:border-primary" : ""
             }`}
         />
         {errors?.email && (
@@ -152,8 +152,8 @@ const ContactFormInteraction = () => {
           autoComplete="off"
           className={`mb-2 w-full appearance-none border-0 border-b-2 bg-transparent
             py-2 focus:outline-none placeholder:text-neutral-400 
-            focus:bg-transparent focus:text-purple-800  ${
-              formData?.message ? "focus:border-purple-800" : ""
+            focus:bg-transparent focus:text-primary  ${
+              formData?.message ? "focus:border-primary" : ""
             }`}
         />
         {errors?.message && (
@@ -168,9 +168,9 @@ const ContactFormInteraction = () => {
         disabled={isSending}
         className={`w-full md:w-[60%] text-sm lg:text-xl py-2 px-4 lg:px-6 lg:py-2 
           rounded uppercase font-semibold flex items-center gap-2 justify-center
-          shadow-inner shadow-purple-500 text-purple-800 
+          shadow-inner shadow-primary text-primary 
           transition-all duration-300 ease-in-out tracking-wider
-          hover:text-white hover:bg-purple-800
+          hover:text-white hover:bg-primary
           ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
       >
         {isSending ? "Sending..." : "Send"}

@@ -47,13 +47,13 @@ const Projects = () => {
                   <div className="flex flex-wrap gap-4">
                     <Link href={project.githubLink} target="_blank">
                       <FaGithub
-                        className="cursor-pointer text-2xl hover:text-purple-800
+                        className="cursor-pointer text-2xl hover:text-primary
                           text-white"
                       />
                     </Link>
                     <Link href={project.liveLink} target="_blank">
                       <FaEye
-                        className="cursor-pointer text-2xl hover:text-purple-800 
+                        className="cursor-pointer text-2xl hover:text-primary 
                           text-white"
                       />
                     </Link>
@@ -66,7 +66,7 @@ const Projects = () => {
                       <span
                         key={`${tech}-${index}`}
                         className="mr-2 mt-4 rounded px-2 py-1 text-sm font-medium
-                            bg-neutral-900 text-purple-800"
+                            bg-neutral-900 text-primary"
                       >
                         {tech}
                       </span>

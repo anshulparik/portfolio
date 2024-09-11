@@ -10,7 +10,7 @@ import { MotionDiv } from "./animations/Motion";
 const Footer = () => {
   return (
     <footer
-      className="bg-purple-800 rounded-tl-[80px] pt-12 pb-6 md:py-12
+      className="bg-primary rounded-tl-[80px] pt-12 pb-6 md:py-12
       px-8 ml-12 w-[calc(100%_-_48px)] overflow-x-hidden"
     >
       <div className="md:flex md:items-center md:justify-between mb-6 md:mb-12">
