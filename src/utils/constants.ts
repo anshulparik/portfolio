@@ -1,6 +1,7 @@
 import travellerHome from "../../public/images/lone.png";
 import teaStationHome from "../../public/images/tea.png";
 import animeInsightHome from "../../public/images/anime.png";
+import vibelyHome from "../../public/images/vibely.png";
 
 import { GrMysql } from "react-icons/gr";
 import { RiNextjsFill } from "react-icons/ri";
@@ -73,12 +74,29 @@ export const FOOTER = {
 
 export const PROJECTS = [
   {
+    title: "Vibely",
+    image: vibelyHome,
+    description:
+      "Vibely is a modern social media app designed for seamless interaction and connectivity. Users can log in, create posts, add comments, connect with friends, and like their favorite posts. The app is built using Next.js for the front-end, NextAuth for secure user authentication, Prisma as an ORM, and PostgreSQL for robust data management. Server actions ensure a responsive, dynamic user experience, making Vibely both fast and efficient.",
+    technologies: [
+      "Next.js",
+      "NextAuth v5",
+      "Tailwind CSS",
+      "Server Actions",
+      "Server Components",
+      "Postgres",
+      "Prisma",
+    ],
+    liveLink: process?.env?.NEXT_PUBLIC_VIBELY_LINK as Url,
+    githubLink: process?.env?.NEXT_PUBLIC_VIBELY_GITHUB as Url,
+  },
+  {
     title: "Anime Insight",
     image: animeInsightHome,
     description:
       "The Anime Insight project is a dynamic web application designed to provide users with comprehensive ratings and information about their favorite anime series. Built with Next.js, this project utilizes server actions for efficient data fetching, ensuring a seamless and responsive experience. The application features infinite scroll, allowing users to effortlessly browse through an extensive list of anime without interruptions. Engaging animations enhance the user interface, creating a visually appealing and interactive platform for anime enthusiasts.",
     technologies: [
-      "Next,js",
+      "Next.js",
       "Tailwind CSS",
       "Server Actions",
       "Server Components",
