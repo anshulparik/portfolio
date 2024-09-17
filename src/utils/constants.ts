@@ -73,23 +73,23 @@ export const FOOTER = {
 } as const;
 
 export const PROJECTS = [
-  {
-    title: "Vibely",
-    image: vibelyHome,
-    description:
-      "Vibely is a modern social media app designed for seamless interaction and connectivity. Users can log in, create posts, add comments, connect with friends, and like their favorite posts. The app is built using Next.js for the front-end, NextAuth for secure user authentication, Prisma as an ORM, and PostgreSQL for robust data management. Server actions ensure a responsive, dynamic user experience, making Vibely both fast and efficient.",
-    technologies: [
-      "Next.js",
-      "NextAuth v5",
-      "Tailwind CSS",
-      "Server Actions",
-      "Server Components",
-      "Postgres",
-      "Prisma",
-    ],
-    liveLink: process?.env?.NEXT_PUBLIC_VIBELY_LINK as Url,
-    githubLink: process?.env?.NEXT_PUBLIC_VIBELY_GITHUB as Url,
-  },
+  // {
+  //   title: "Vibely",
+  //   image: vibelyHome,
+  //   description:
+  //     "Vibely is a modern social media app designed for seamless interaction and connectivity. Users can log in, create posts, add comments, connect with friends, and like their favorite posts. The app is built using Next.js for the front-end, NextAuth for secure user authentication, Prisma as an ORM, and PostgreSQL for robust data management. Server actions ensure a responsive, dynamic user experience, making Vibely both fast and efficient.",
+  //   technologies: [
+  //     "Next.js",
+  //     "NextAuth v5",
+  //     "Tailwind CSS",
+  //     "Server Actions",
+  //     "Server Components",
+  //     "Postgres",
+  //     "Prisma",
+  //   ],
+  //   liveLink: process?.env?.NEXT_PUBLIC_VIBELY_LINK as Url,
+  //   githubLink: process?.env?.NEXT_PUBLIC_VIBELY_GITHUB as Url,
+  // },
   {
     title: "Anime Insight",
     image: animeInsightHome,
