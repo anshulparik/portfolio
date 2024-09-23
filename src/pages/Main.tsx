@@ -7,7 +7,7 @@ const Main = () => {
     <section
       id="main"
       className="relative h-[calc(100vh-77px)] lg:h-[calc(100vh-103px)] 
-      flex flex-col justify-center items-center bg-cover bg-center"
+      flex flex-col justify-center items-center bg-cover bg-center mb-14 lg:mb-40"
       style={{ backgroundImage: 'url("/images/bg.jpg")' }}
     >
       <div className="absolute inset-0 bg-black opacity-80" />
@@ -16,10 +16,10 @@ const Main = () => {
           <span className="text-purple-800">Hello!</span> <span>I am</span>
         </span>
         <h1 className="px-2 text-5xl md:text-6xl lg:text-9xl font-bold tracking-tight">
-          <TextReveal text="Anshul" />{" "}
-          <span className="text-white">
-            <TextReveal text="Parik" />
-          </span>
+          <span className="text-purple-800">
+            <TextReveal text="Anshul" />
+          </span>{" "}
+          <TextReveal text="Parik" />
         </h1>
         <TextSlider />
       </div>
